@@ -143,7 +143,7 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
     engine_cfg = config["engine"]
     is_uci = engine_cfg["protocol"] == "uci"
     is_uci_ponder = is_uci and engine_cfg.get("uci_ponder", False)
-    move_overhead = config.get("move_overhead", 1000)
+    move_overhead = 400 # lag to lichess
     polyglot_cfg = engine_cfg.get("polyglot", {})
     book_cfg = polyglot_cfg.get("book", {})
 
